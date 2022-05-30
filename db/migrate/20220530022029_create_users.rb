@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration[7.0]
       t.text :last_name
       t.string :state
       t.text :email
-      t.text :date_of_birth
+      t.date :birthday
 
       t.timestamps
     end
