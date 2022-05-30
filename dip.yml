@@ -1,0 +1,40 @@
+version: '7.1'
+
+compose:
+  files:
+    - docker-compose.yml
+
+interaction:
+  bash:
+    description: "Open a bash shell in app's container"
+    service: app
+    command: '/bin/bash'
+
+  rake:
+    description: "Run take tasks in app's container"
+    service: app
+    command: bundle exec rake
+
+  rails:
+    description: "Run rails in app's container"
+    service: app
+    command: bundle exec rails
+    subcommands:
+      s:
+        description: "Serve the API @ http://localhost:3000"
+        service: app
+        compose:
+          run_options: [service-ports, use-aliases]
+
+  test:
+    description: "Run tests suite"
+    service: app
+    command: bundle exec rails test
+
+  psql:
+    service: postgres
+    command: env PGPASSWORD=postgres psql -h postgres -U postgres
+
+provision:
+  - dip compose down --volumes
+  - dip compose up -d postgres redis
