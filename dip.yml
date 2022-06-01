@@ -22,6 +22,7 @@ interaction:
     subcommands:
       s:
         description: "Serve the API @ http://localhost:3000"
+        command: bundle exec rails s -b 0.0.0.0
         service: app
         compose:
           run_options: [service-ports, use-aliases]
