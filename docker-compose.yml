@@ -25,6 +25,8 @@ services:
       - '3000:3000'
     volumes:
       - '.:/app'
+    ports:
+      - '3000:3000'
     environment:
       DATABASE_URL: "postgresql://postgres:postgres@postgres:5432"
       DB_HOST: postgres
