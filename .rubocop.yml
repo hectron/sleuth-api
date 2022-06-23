@@ -35,10 +35,10 @@ Naming/ConstantName:
   Enabled: false
 
 Style/StringLiterals:
-  Enabled: double_quotes
+  EnforcedStyle: double_quotes
 
 Style/StringLiteralsInInterpolation:
-  Enabled: double_quotes
+  EnforcedStyle: double_quotes
 
 Style/FrozenStringLiteralComment:
   SafeAutoCorrect: true
