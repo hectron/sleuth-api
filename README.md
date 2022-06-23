@@ -1,5 +1,19 @@
 # README
 
+## Development
+
+Ensure that the following are installed:
+
+- Docker
+- docker-compose
+- dip
+
+### Using dip
+
+```zsh
+dip rails c
+```
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
