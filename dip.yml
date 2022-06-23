@@ -30,7 +30,7 @@ interaction:
   test:
     description: "Run tests suite"
     service: app
-    command: bundle exec rails test
+    command: bundle exec rails test --pride
 
   psql:
     service: postgres

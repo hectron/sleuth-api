@@ -11,7 +11,12 @@ Ensure that the following are installed:
 ### Using dip
 
 ```zsh
+dip rails db:setup
+dip RAILS_ENV=test rails db:setup
+
 dip rails c
+
+dip test
 ```
 
 This README would normally document whatever steps are necessary to get the
